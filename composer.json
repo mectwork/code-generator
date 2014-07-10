@@ -17,6 +17,6 @@
         "phpunit/phpunit": "4.1.*"
     },
     "autoload": {
-        "psr-0": { "Cubalider\\Component\\Code": "src/" }
+        "psr-0": { "Cubalider\\Component\\Util": "src/" }
     }
 }

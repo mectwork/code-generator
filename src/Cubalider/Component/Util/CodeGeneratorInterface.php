@@ -1,11 +1,11 @@
 <?php
 
-namespace Cubalider\Component\Code;
+namespace Cubalider\Component\Util;
 
 /**
  * @author Manuel Emilio Carpio <mectwork@gmail.com>
  */
-interface GeneratorInterface
+interface CodeGeneratorInterface
 {
     /**
      * Generates a code.
