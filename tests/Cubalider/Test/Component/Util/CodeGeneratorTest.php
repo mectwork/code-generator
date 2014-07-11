@@ -2,6 +2,8 @@
 
 namespace Cubalider\Test\Component\Util;
 
+use Cubalider\Component\Util\CodeGenerator;
+
 class CodeGeneratorTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -9,7 +11,7 @@ class CodeGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     public function testGenerateDefaultParameter()
     {
-        $generator = new \Cubalider\Component\Util\CodeGenerator();
+        $generator = new CodeGenerator();
 
         $code = $generator->generate();
         $this->assertEquals(1, preg_match("/^\d{4}-\d{4}-\d{4}$/", $code));
@@ -20,7 +22,7 @@ class CodeGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     public function testGenerateWithDividerParameter()
     {
-        $generator = new \Cubalider\Component\Util\CodeGenerator();
+        $generator = new CodeGenerator();
 
         $code = $generator->generate('xxxx-xxxx-xxxx', '+');
         $this->assertEquals(1, preg_match("/^\d{4}\+\d{4}\+\d{4}$/", $code));
@@ -31,7 +33,7 @@ class CodeGeneratorTest extends \PHPUnit_Framework_TestCase
      */
     public function testGenerateWithPatternParameter()
     {
-        $generator = new \Cubalider\Component\Util\CodeGenerator();
+        $generator = new CodeGenerator();
 
         $code = $generator->generate('xx-xx-xxx');
         $this->assertEquals(1, preg_match("/^\d{2}-\d{2}-\d{3}$/", $code));
